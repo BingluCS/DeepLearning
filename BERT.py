@@ -35,7 +35,7 @@ class Wiki_book_Dataset(torch.utils.data.Dataset):
             pred =f['data'][content_idx]
         with h5py.File(labels_path, 'r') as f:
             label =f['data'][content_idx]
-        with h5py.File(labels_path, 'r') as f:
+        with h5py.File(weight_path, 'r') as f:
             weight =f['data'][content_idx]
         inputm_t = torch.tensor(inputm)
         attm_t = torch.tensor(attm)
